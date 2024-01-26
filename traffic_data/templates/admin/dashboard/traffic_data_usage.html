@@ -1,0 +1,10 @@
+{% extends "admin/dashboard/modules/module.html" %}
+
+{% block module_content %}
+    <div class="module">
+        <h3>{{ title }}</h3>
+        <div class="module_content">
+            <p>Total Size: {{ children.0 }}</p>
+        </div>
+    </div>
+{% endblock %}

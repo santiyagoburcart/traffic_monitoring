@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic List</title>
+</head>
+<body>
+
+<h1>Traffic Data List</h1>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>Timestamp</th>
+        <th>Source IPv4</th>
+        <th>Destination IPv4</th>
+        <th>Source IPv6</th>
+        <th>Destination IPv6</th>
+        <th>Protocol</th>
+        <th>Size</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for item in data %}
+    <tr>
+        <td>{{ item.timestamp }}</td>
+        <td>{{ item.source_ipv4 }}</td>
+        <td>{{ item.destination_ipv4 }}</td>
+        <td>{{ item.source_ipv6 }}</td>
+        <td>{{ item.destination_ipv6 }}</td>
+        <td>{{ item.protocol }}</td>
+        <td>{{ item.size }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+</body>
+</html>
